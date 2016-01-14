@@ -1,0 +1,116 @@
+header {
+	background-image: url('../img/backgrounds/rutland.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #71ACBD;
+}
+
+header .dark {
+	background: none;
+}
+
+footer {
+	background-image: url('../img/backgrounds/bottom.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #2c3e50;
+}
+
+#help {
+	background-image: url('../img/backgrounds/help.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #71ACBD;
+}
+
+#committee {
+	background-image: url('../img/backgrounds/mountain.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #71ACBD;
+}
+
+header .intro-text .name, .dark h2 {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #2c3e50;
+}
+
+a, a:hover, a:focus, a:active, a.active {
+	outline: 0;
+	color: #71ACBD;
+}
+
+.dark a, a:hover, .dark a:focus, .dark a:active, .dark a.active {
+	outline: 0;
+	color: #2c3e50;
+}
+
+.dark {
+	background: #71ACBD;
+	color: #fff;
+}
+
+.light {
+	background: #fff;
+	color: #2c3e50;
+}
+
+hr.cog, hr.cog {
+	margin: 25px auto 30px;
+	padding: 0;
+	max-width: 250px;
+	border: 0;
+	border-top: solid 5px;
+	text-align: center;
+}
+
+hr.cog:after, hr.cog:after {
+	content: "\f013";
+	display: inline-block;
+	position: relative;
+	top: -.8em;
+	padding: 0 .25em;
+	font-family: FontAwesome;
+	font-size: 2em;
+}
+
+.dark .btn {
+	background: #eee;
+	color: #2c3e50;
+}
+
+.dark hr.cog {
+	border-color: #fff;
+}
+
+.dark hr.cog:after {
+	color: #fff;
+	background-color: #71ACBD;
+}
+
+.light hr.cog {
+	border-color: #2c3e50;
+}
+
+.light hr.cog:after {
+	color: #2c3e50;
+	background-color: #fff;
+}
+
+#about div.row {
+	margin-bottom: 30px;
+}
+
+#faire-images img {
+	padding: 10px;
+}
+
+.support {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
