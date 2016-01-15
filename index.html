@@ -17,11 +17,13 @@
 <!-- Custom CSS -->
 <link href="css/freelancer.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
+<link href="css/navbar-break.css" rel="stylesheet">
+
 
 <!-- Custom Fonts -->
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,6 +35,20 @@
 </head>
 
 <body id="page-top" class="index">
+	<!-- Facebook SDK -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id))
+				return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<!-- /Facebook SDK -->
 
 	<!-- Navigation -->
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -70,7 +86,8 @@
 					<div class="intro-text">
 						<span class="name">Greater Rutland Makerspace</span>
 						<hr class="cog">
-						<span> <a href="#" class="btn btn-lg btn-primary"> Please Take Our Survey Today!</a>
+						<span> <a href="https://rutlandmakers.wufoo.com/forms/mmpd9j60py4udh/" class="btn btn-lg btn-primary">
+								Please Take Our Survey Today!</a>
 						</span>
 					</div>
 				</div>
@@ -136,6 +153,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
+
 					<p>The most important part of a Makerspace is you! For the Greater Rutland Makerspace to succeed we need a
 						group of interested, excited members who want to learn new skills, mentor others, teach classes for both members
 						and the public, and help make the dream a reality. Whether you are a hobbiest with bigger dreams than fit in your
@@ -152,7 +170,8 @@
 
 				</div>
 				<div class="col-lg-8 col-lg-offset-2 text-center">
-					<a href="#" class="btn btn-lg btn-primary"> Take our Survey </a>
+					<a href="https://rutlandmakers.wufoo.com/forms/mmpd9j60py4udh/" class="btn btn-lg btn-primary"> Take our Survey
+					</a>
 				</div>
 			</div>
 		</div>
@@ -278,13 +297,18 @@
 		<div class="footer-above">
 			<div class="container">
 				<div class="row">
-					<div class="footer-col col-md-4 col-md-offset-4">
+					<div class="footer-col col-md-6 col-md-offset-3">
 						<h3>Around the Web</h3>
 						<ul class="list-inline">
-							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a></li>
+							<li><a href="https://www.facebook.com/rutlandmakers/" class="btn-social btn-outline"><i
+									class="fa fa-fw fa-facebook"></i></a>
+								<div class="fb-follow" data-href="https://www.facebook.com/rutlandmakers/" data-width="350" data-height="50"
+									data-layout="standard" data-show-faces="true" data-colorscheme="dark"></div></li>
+							<!--  
 							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a></li>
 							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
 							<li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a></li>
+							-->
 						</ul>
 					</div>
 				</div>
@@ -312,7 +336,7 @@
 	<script src="js/bootstrap.min.js"></script>
 
 	<!-- Plugin JavaScript -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 	<script src="js/classie.js"></script>
 
 	<!-- Custom Theme JavaScript -->
