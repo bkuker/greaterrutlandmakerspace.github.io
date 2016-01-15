@@ -59,20 +59,20 @@ a, a:hover, a:focus, a:active, a.active {
 	color: #2c3e50;
 }
 
-hr.cog, hr.cog {
+hr.cog {
+	border: none;
 	margin: 25px auto 30px;
-	padding: 0;
 	max-width: 250px;
-	border: 0;
-	border-top: solid 5px;
+	height: 5px;
 	text-align: center;
+	padding: 0;
 }
 
-hr.cog:after, hr.cog:after {
+hr.cog:after {
 	content: "\f013";
 	display: inline-block;
 	position: relative;
-	top: -.8em;
+	top: -.6em;
 	padding: 0 .25em;
 	font-family: FontAwesome;
 	font-size: 2em;
@@ -84,20 +84,18 @@ hr.cog:after, hr.cog:after {
 }
 
 .dark hr.cog {
-	border-color: #fff;
+	background-image: url('../img/hr-light.png');
 }
 
 .dark hr.cog:after {
 	color: #fff;
-	background-color: #71ACBD;
 }
 
 .light hr.cog {
-	border-color: #2c3e50;
+	background-image: url('../img/hr-dark.png');
 }
 
 .light hr.cog:after {
-	color: #2c3e50;
 	background-color: #fff;
 }
 
