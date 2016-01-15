@@ -12,11 +12,12 @@ From various GRMS sources.
 
 ###Faire
 
-Images by Douglas Webster. **USED WITHOUT PERMISSION**
+Images by Douglas Webster. Permission granted via Email to use without credit, Jan 15 2016.
 
 ###Backgrounds
 
-From Rutland and REDC sites. **USED WITHOUT PERMISSION**
+Rutland photos by Bill Kuker. Permission granted.
+Shop image from pixabay.com. Creative Commons CC0 - Public Domain.
 
 ###Support
 
