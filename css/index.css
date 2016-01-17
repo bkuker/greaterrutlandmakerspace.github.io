@@ -82,8 +82,17 @@ hr.cog:after {
 	background-image: url('../img/hr-light.png');
 }
 
+#help .btn {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 .dark .btn-warning {
 	background-color: #FFCE80;
+}
+
+.dark .btn-warning:hover {
+	background-color: #f39c12;
 }
 
 .dark hr.cog:after {
