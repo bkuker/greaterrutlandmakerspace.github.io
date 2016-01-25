@@ -124,3 +124,33 @@ hr.cog:after {
 .fb-follow {
 	padding-left: 20px;
 }
+
+.person>span.name {
+	font-weight: bold;
+}
+
+.person>span.where {
+	font-style: italic;
+	font-size: smaller;
+}
+
+li.person>span.where:before {
+	content: " - ";
+}
+
+.person>a.email {
+	display: block;
+}
+
+a.email:before {
+	content: "\f003";
+	display: inline-block;
+	font-family: FontAwesome;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: smaller;
+}
+
+p.person>span {
+	display: block;
+}
