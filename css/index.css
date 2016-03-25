@@ -10,6 +10,30 @@ header .dark {
 	background: none;
 }
 
+ul.social {
+	margin-top: 50px;
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.social img {
+	display: inline;
+	vertical-align: middle;
+	margin: 10px 10px 10px;
+}
+
+.social li {
+	text-align: left;
+	list-style: none;
+}
+
+.social a {
+	font-size: 18px;
+	color: white!important;
+	font-weight: bold;
+}
+
 footer {
 	background-image: url('../img/backgrounds/bottom.jpg');
 	background-size: cover;
