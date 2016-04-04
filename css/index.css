@@ -111,11 +111,11 @@ hr.cog:after {
 	margin-bottom: 20px;
 }
 
-.dark .btn-warning {
+.btn-warning {
 	background-color: #FFCE80;
 }
 
-.dark .btn-warning:hover {
+.btn-warning:hover {
 	background-color: #f39c12;
 }
 
