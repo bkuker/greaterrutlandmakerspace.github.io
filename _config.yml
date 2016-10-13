@@ -1,0 +1,6 @@
+# site settings
+title: Greater Rutland Makerspace
+description: "The Greater Rutland Makerspace is a Makerspace in Rutland, Vermont."
+
+# build settings
+port: 4000
