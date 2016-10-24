@@ -9,29 +9,39 @@ layout: default
 				<div class="intro-text">
 					<span class="name">Greater Rutland Makerspace</span>
 					<hr class="cog">
-					<ul class="social">
-						<li><a href="https://www.facebook.com/rutlandmakers/"><img src="img/social/facebook.png">Follow us on Facebook.</a></li>
-						<li><a href="http://www.meetup.com/Greater-Rutland-Makerspace/"><img src="img/social/meetup.png">Join our Meetup group.</a></li>
-						<li><a href="http://eepurl.com/chXoc9"><img src="img/social/email.png">Join our mailing list.</a></li>
-					</ul>
+					{% include social.html %}
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
 	
-{% include pumpkins.html style="light"%}
-{% include velco.html style="light"%}
+<section id="events" class="light">
+	{% for post in site.posts reversed%}
+		<div class="post container">
+			<div class="row" style='margin-bottom: 40px'>
+				<div class="col-lg-11 col-lg-offset-1">
+					<a href="{{post.url}}">
+					<h1><!-- Whitespace added for readability -->
+						{% assign d = post.date | date: "%-d"  %}
+						{{ post.date | date: "%B" }} 
+						{% case d %}
+						  {% when '1' or '21' or '31' %}{{ d }}st
+						  {% when '2' or '22' %}{{ d }}nd
+						  {% when '3' or '23' %}{{ d }}rd
+						  {% else %}{{ d }}th
+						  {% endcase %}:
+					</h1>
+					<h2>{{post.title}}</h2>
+					</a>
+				</div>
+			</div>
+			{{post.content}}
+		</div>
+	{% endfor %}
+</section>
+
 {% include about.html style="dark"%}
 {% include help.html style="light"%}
 {% include people.html style="dark"%}
 {% include support.html style="light"%}
-
-
-
-
-
-
-
-
-

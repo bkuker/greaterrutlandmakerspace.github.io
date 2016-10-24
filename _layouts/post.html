@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="onePost light">
+	<div class="container">
+		<div class="row" style='margin-bottom: 40px'>
+			<div class="col-lg-11 col-lg-offset-1">
+				<h1><!-- Whitespace added for readability -->
+					{% assign d = page.date | date: "%-d"  %}
+					{{ page.date | date: "%B" }} 
+					{% case d %}
+					  {% when '1' or '21' or '31' %}{{ d }}st
+					  {% when '2' or '22' %}{{ d }}nd
+					  {% when '3' or '23' %}{{ d }}rd
+					  {% else %}{{ d }}th
+					  {% endcase %}:
+				</h1>
+				<h2>{{page.title}}</h2>
+			</div>
+		</div>
+		{{content}}
+	</div>
+</section>
+	

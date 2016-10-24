@@ -18,12 +18,12 @@
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	
 <!--  Custom Fonts -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 <!--  LESS files -->
-<link href="css/default.less" rel="stylesheet/less" type="text.css">
+<link href="/css/default.less" rel="stylesheet/less" type="text.css">
 
 <!--  LESS clientside processor -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
@@ -38,31 +38,43 @@
 </head>
 
 <body id="page-top" class="index">
-	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header page-scroll">
-				<a class="navbar-brand" href="#page-top">Greater Rutland Makerspace</a>
+	<div id="wrap">
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header page-scroll">
+					<a class="navbar-brand" href="/#page-top">Greater Rutland Makerspace</a>
+				</div>
+	
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						{% if page.id %}
+							<li class="page-scroll"><a href="/">Home</a></li>
+						{% else %}
+							<li class="hidden"><a href="#page-top"></a></li>
+							<li class="page-scroll"><a href="#events">Events</a></li>
+							<li class="page-scroll"><a href="#about">About</a></li>
+							<li class="page-scroll"><a href="#help">Get Involved</a></li>
+							<li class="page-scroll"><a href="#people">People</a></li>
+							<li class="page-scroll"><a href="#support">Support</a></li>
+						{% endif %}
+					</ul>
+				</div>
 			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="hidden"><a href="#page-top"></a></li>
-					<li class="page-scroll"><a href="#events">Events</a></li>
-					<li class="page-scroll"><a href="#about">About</a></li>
-					<li class="page-scroll"><a href="#help">Get Involved</a></li>
-					<li class="page-scroll"><a href="#people">People</a></li>
-					<li class="page-scroll"><a href="#support">Support</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	{{content}}
+		</nav>
+	
+		{{content}}
+		<div id="push"></div>
+	</div>
 	
 	<footer class="text-center">
 		<div class="footer-below">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">Copyright &copy; Greater Rutland Makerspace 2016</div>
+					<div class="col-lg-4 copy">Copyright &copy; Greater Rutland Makerspace 2016</div>
+					<div class="col-lg-8">
+						{% include social.html %}
+					</div>
+					
 				</div>
 			</div>
 		</div>

@@ -6,7 +6,7 @@
 @light-bg-color: #fff;
 @light-text-color: #2c3e50;
 
-body {
+#wrap {
 	padding-top: 51px;
 }
 
@@ -30,15 +30,30 @@ h1 , h2 , h3 , h4 , h5 , h6 {
 	color: @dark-text-color;
 }
 
+.dark a h1, .dark a h2 {
+	color: @dark-text-color;
+}
+
 .light {
 	background: @light-bg-color;
 	color: @light-text-color;
 }
 
-body > section {
+.light a h1, .light a h2 {
+	color: @light-text-color;
+}
+
+#wrap > section {
 	padding: 100px 0;
 }
 
+div.post {
+	padding: 100px 0;
+}
+
+#wrap > section.onePost {
+	padding: 20px 0;
+}
 #about div.row {
     margin-bottom: 30px;
 }
@@ -48,16 +63,7 @@ body > section {
 @import "social";
 @import "cogs";
 @import "people";
-
-footer {
-	background-image: url('../img/backgrounds/bottom.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-color: #2c3e50;
-	padding: 25px 0;
-	color: white;
-}
+@import "footer.css";
 
 body section.dark:nth-of-type(2),
 body section.dark:nth-of-type(3) {
