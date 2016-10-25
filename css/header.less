@@ -26,12 +26,20 @@ header .intro-text .name {
 	display: block;
 	text-transform: uppercase;
 	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 2em;
 	font-weight: 700;
-}
-
-header .intro-text .name {
 	font-size: 4.75em;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #2c3e50;
+}
+
+@media ( max-width : 670px) {
+	header .intro-text .name {
+		font-size: 3em;
+	}
+}
+
+@media ( max-width : 400px) {
+	header .intro-text .name {
+		font-size: 2em;
+	}
 }
