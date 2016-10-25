@@ -18,26 +18,30 @@ layout: default
 	
 <section id="events" class="light">
 	{% for post in site.posts reversed%}
-		<div class="post container">
-			<div class="row" style='margin-bottom: 40px'>
-				<div class="col-lg-11 col-lg-offset-1">
-					<a href="{{post.url}}">
-					<h1><!-- Whitespace added for readability -->
-						{% assign d = post.date | date: "%-d"  %}
-						{{ post.date | date: "%B" }} 
-						{% case d %}
-						  {% when '1' or '21' or '31' %}{{ d }}st
-						  {% when '2' or '22' %}{{ d }}nd
-						  {% when '3' or '23' %}{{ d }}rd
-						  {% else %}{{ d }}th
-						  {% endcase %}:
-					</h1>
-					<h2>{{post.title}}</h2>
-					</a>
+		{% if post.past %}
+			<!-- Skipping past event {{post.title}} -->
+		{% else %}
+			<div class="post container">
+				<div class="row" style='margin-bottom: 40px'>
+					<div class="col-lg-11 col-lg-offset-1">
+						<a href="{{post.url}}">
+						<h1><!-- Whitespace added for readability -->
+							{% assign d = post.date | date: "%-d"  %}
+							{{ post.date | date: "%B" }} 
+							{% case d %}
+							  {% when '1' or '21' or '31' %}{{ d }}st
+							  {% when '2' or '22' %}{{ d }}nd
+							  {% when '3' or '23' %}{{ d }}rd
+							  {% else %}{{ d }}th
+							  {% endcase %}:
+						</h1>
+						<h2>{{post.title}}</h2>
+						</a>
+					</div>
 				</div>
+				{{post.content}}
 			</div>
-			{{post.content}}
-		</div>
+		{% endif %}
 	{% endfor %}
 </section>
 
