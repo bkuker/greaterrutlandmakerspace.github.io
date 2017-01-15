@@ -1,29 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-	var dLayers = d3.select("#layers");
-	var dSvg = d3.select("#diagram > svg");
-	var svg = dSvg.node();
-
-	svg.setAttribute("viewBox", boxToString(growBox(svg.getBBox(), 0.025)));
-
-	dSvg.selectAll("g").filter(function() {
-		return this.getAttribute("inkscape:groupmode") == "layer";
-	}).each(function() {
-		var layerG = this;
-		var label = layerG.getAttribute("inkscape:label");
-		if ( label == "Building" || label == "Walls" )
-			return;
-		
-		var id = layerG.getAttribute("id");
-		var li = dLayers.append("li");
-		var checkbox = li.append("input").attr('type','checkbox').attr('id','layer-check-'+id);
-		li.append("label").attr('for','layer-check-'+id).text(label);
-		checkbox.on("change", function(d){
-			console.log(checkbox.property("checked"));
-			layerG.style.display = checkbox.property("checked")?'inline':'none';
-			svg.setAttribute("viewBox", boxToString(growBox(svg.getBBox(), 0.025)));
+	less.pageLoadFinished.then(function(){
+		var dLayers = d3.select("#layers");
+		var dSvg = d3.select("#diagram > svg");
+		var svg = dSvg.node();
+	
+		svg.setAttribute("viewBox", boxToString(growBox(svg.getBBox(), 0.025)));
+	
+		dSvg.selectAll("g").filter(function() {
+			return this.getAttribute("inkscape:groupmode") == "layer";
+		}).each(function() {
+			var layerG = this;
+			var label = layerG.getAttribute("inkscape:label");
+			if ( label == "Building" || label == "Walls" )
+				return;
+			
+			var id = layerG.getAttribute("id");
+			var li = dLayers.append("li");
+			var checkbox = li.append("input").attr('type','checkbox').attr('id','layer-check-'+id);
+			li.append("label").attr('for','layer-check-'+id).text(label);
+			checkbox.on("change", function(d){
+				console.log(checkbox.property("checked"));
+				layerG.style.display = checkbox.property("checked")?'inline':'none';
+				svg.setAttribute("viewBox", boxToString(growBox(svg.getBBox(), 0.025)));
+			});
+			checkbox.property("checked", layerG.style.display == "inline");
 		});
-		checkbox.property("checked", layerG.style.display == "inline");
 	});
 });
 
