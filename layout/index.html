@@ -1,0 +1,37 @@
+---
+id: shop-layout
+layout: default
+---
+<style type="text/css">
+	#diagram {
+		position: absolute;
+		top: 60px;
+		bottom: 60px;
+		left: 260px;
+		right: 25px;
+	}
+	#diagram > svg {
+		width: 100%;
+		height: 100%;
+	}
+	#controls {
+		position: absolute;
+		top: 60px;
+		bottom: 60px;
+		left: 0px;
+		width: 250px;
+	}
+	#layers {
+		list-style: none;
+	}
+</style>
+<div id="diagram">
+	{% include_relative space.svg%}
+</div>
+<div id="controls">
+	<h2>Show Layers:</h2>
+	<ul id="layers">
+	</ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.4.1/d3.min.js"></script>
+<script src="layout.js"></script>
