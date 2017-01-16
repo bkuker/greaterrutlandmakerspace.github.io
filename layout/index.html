@@ -21,14 +21,25 @@ layout: default
 		left: 0px;
 		width: 250px;
 	}
-	#layers {
+	#controls ul {
 		list-style: none;
+	}
+	#controls a {
+		cursor: pointer;
+	}
+	#showAllZones {
+		font-weight: bold;
+		font-size: larger;
 	}
 </style>
 <div id="diagram">
 	{% include_relative space.svg%}
 </div>
 <div id="controls">
+	<h2>Zones</h2>
+	<ul id="zones">
+		<li><a id="showAllZones">Show All</a></li>
+	</ul>
 	<h2>Show Layers:</h2>
 	<ul id="layers">
 	</ul>
