@@ -1,0 +1,175 @@
+---
+id: wishlist
+layout: default
+---
+<style type="text/css">
+.wishlist .item {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.wishlist .item img {
+	border: 4px solid #364c63;
+}
+
+.wishlist .price {
+	font-size: x-large;
+	font-weight: bold;
+	color: #007a33;
+}
+
+section.dark .wishlist .item .price {
+	text-shadow: 0 0 4px #fff;
+}
+
+section.dark .wishlist .item h2 {
+	text-shadow: 0 0 2px #2c3e50;
+}
+
+.wishlist a {
+	color: #2c3e50;
+}
+</style>
+
+
+<section class="light">
+	<div class="container wishlist">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Rapid Prototyping</h2>
+				<hr class="cog">
+			</div>
+		</div>
+		{% assign tools = site.wishlist | where:'shop', 'rapid prototyping' %}
+		{% for tool in tools %}
+			{% assign loopindex = forloop.index | modulo: 2 %}
+			{% if loopindex == 0 %}
+				{% assign push = 'col-md-push-6' %}
+				{% assign pull = 'col-md-pull-6' %}
+			{% else %}
+				{% assign push = '' %}
+				{% assign pull = '' %}
+			{% endif %}
+			<div class="row item">
+				<div class="col-md-6 {{push}}">
+					<h2>{{tool.title}}</h2>
+					<h3>
+						<a href="{{tool.link}}">{{tool.model}}</a>
+					</h3>
+					<div class="price">{{tool.price}}</div>
+					<p>{{tool.content}}</p>
+				</div>
+				<div class="col-md-6 {{pull}}">
+					<img class="img-responsive" src="img/wishlist/{{tool.image}}" />
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section class="dark">
+	<div class="container wishlist">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Wood Shop</h2>
+				<hr class="cog">
+			</div>
+		</div>
+		{% assign tools = site.wishlist | where:'shop', 'wood' %}
+		{% for tool in tools %}
+			{% assign loopindex = forloop.index | modulo: 2 %}
+			{% if loopindex == 0 %}
+				{% assign push = 'col-md-push-6' %}
+				{% assign pull = 'col-md-pull-6' %}
+			{% else %}
+				{% assign push = '' %}
+				{% assign pull = '' %}
+			{% endif %}
+			<div class="row item">
+				<div class="col-md-6 {{push}}">
+					<h2>{{tool.title}}</h2>
+					<h3>
+						<a href="{{tool.link}}">{{tool.model}}</a>
+					</h3>
+					<div class="price">{{tool.price}}</div>
+					<p>{{tool.content}}</p>
+				</div>
+				<div class="col-md-6 {{pull}}">
+					<img class="img-responsive" src="img/wishlist/{{tool.image}}" />
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+
+
+<section class="light">
+	<div class="container wishlist">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Electronics</h2>
+				<hr class="cog">
+			</div>
+		</div>
+		{% assign tools = site.wishlist | where:'shop', 'electronics' %}
+		{% for tool in tools %}
+			{% assign loopindex = forloop.index | modulo: 2 %}
+			{% if loopindex == 0 %}
+				{% assign push = 'col-md-push-6' %}
+				{% assign pull = 'col-md-pull-6' %}
+			{% else %}
+				{% assign push = '' %}
+				{% assign pull = '' %}
+			{% endif %}
+			<div class="row item">
+				<div class="col-md-6 {{push}}">
+					<h2>{{tool.title}}</h2>
+					<h3>
+						<a href="{{tool.link}}">{{tool.model}}</a>
+					</h3>
+					<div class="price">{{tool.price}}</div>
+					<p>{{tool.content}}</p>
+				</div>
+				<div class="col-md-6 {{pull}}">
+					<img class="img-responsive" src="img/wishlist/{{tool.image}}" />
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+
+
+<section class="dark">
+	<div class="container wishlist">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Jewelry Area</h2>
+				<hr class="cog">
+			</div>
+		</div>
+		{% assign tools = site.wishlist | where:'shop', 'jewelry' %}
+		{% for tool in tools %}
+			{% assign loopindex = forloop.index | modulo: 2 %}
+			{% if loopindex == 0 %}
+				{% assign push = 'col-md-push-6' %}
+				{% assign pull = 'col-md-pull-6' %}
+			{% else %}
+				{% assign push = '' %}
+				{% assign pull = '' %}
+			{% endif %}
+			<div class="row item">
+				<div class="col-md-6 {{push}}">
+					<h2>{{tool.title}}</h2>
+					<h3>
+						<a href="{{tool.link}}">{{tool.model}}</a>
+					</h3>
+					<div class="price">{{tool.price}}</div>
+					<p>{{tool.content}}</p>
+				</div>
+				<div class="col-md-6 {{pull}}">
+					<img class="img-responsive" src="img/wishlist/{{tool.image}}" />
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>

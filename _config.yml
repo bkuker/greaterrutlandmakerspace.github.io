@@ -5,3 +5,7 @@ future: true
 
 # build settings
 port: 4000
+
+collections:
+  wishlist:
+    output: false
