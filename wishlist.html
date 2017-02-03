@@ -29,6 +29,31 @@ section.dark .wishlist .item h2 {
 .wishlist a {
 	color: #2c3e50;
 }
+
+@media print {
+	img {
+		width: 30%;
+	}
+	.item {
+		page-break-inside: avoid;
+	}
+	#wrap > section {
+		page-break-inside: avoid;
+		padding: 0;
+	}
+	.cog {
+		display: none;
+	}
+	h1 {
+	}
+	a:after {
+		display: block;
+		font-size: small;
+	}
+	#printfix {
+		height: 2000px;
+	}
+}
 </style>
 
 
@@ -143,11 +168,11 @@ section.dark .wishlist .item h2 {
 	<div class="container wishlist">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>Jewelry Area</h2>
+				<h2>Other Tools</h2>
 				<hr class="cog">
 			</div>
 		</div>
-		{% assign tools = site.wishlist | where:'shop', 'jewelry' %}
+		{% assign tools = site.wishlist | where:'shop', 'other' %}
 		{% for tool in tools %}
 			{% assign loopindex = forloop.index | modulo: 2 %}
 			{% if loopindex == 0 %}
@@ -173,3 +198,5 @@ section.dark .wishlist .item h2 {
 		{% endfor %}
 	</div>
 </section>
+
+<div id="printfix"></div>
