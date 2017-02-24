@@ -31,27 +31,19 @@ section.dark .wishlist .item h2 {
 }
 
 @media print {
-	img {
-		width: 30%;
+	.item > div:nth-of-type(1){
+		width: 60%;
+		float: left;
+	}
+	.item > div:nth-of-type(2) {
+		width: 33%;
+		float: right;
+	}
+	.item img {
+		width: 100%;
 	}
 	.item {
 		page-break-inside: avoid;
-	}
-	#wrap > section {
-		page-break-inside: avoid;
-		padding: 0;
-	}
-	.cog {
-		display: none;
-	}
-	h1 {
-	}
-	a:after {
-		display: block;
-		font-size: small;
-	}
-	#printfix {
-		height: 2000px;
 	}
 }
 </style>
@@ -198,5 +190,3 @@ section.dark .wishlist .item h2 {
 		{% endfor %}
 	</div>
 </section>
-
-<div id="printfix"></div>

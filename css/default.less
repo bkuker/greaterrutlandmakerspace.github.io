@@ -101,3 +101,20 @@ body section.dark:nth-of-type(5) {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+
+@media print {
+	#wrap > section {
+		page-break-inside: avoid;
+		padding: 0;
+	}
+	.cog {
+		display: none;
+	}
+	a:after {
+		display: block;
+		font-size: small;
+	}
+	footer {
+		display: none;
+	}
+}
