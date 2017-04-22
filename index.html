@@ -15,7 +15,11 @@ layout: default
 		</div>
 	</div>
 </header>
-	
+
+
+{% include calendar.html style="light"%}
+
+{% if false %}
 <section id="events" class="light">
 	{% for post in site.posts reversed%}
 		{% if post.past %}
@@ -44,8 +48,9 @@ layout: default
 		{% endif %}
 	{% endfor %}
 </section>
+{% endif %}
 
 {% include about.html style="dark"%}
-{% include help.html style="light"%}
+{% include join.html style="light"%}
 {% include people.html style="dark"%}
 {% include support.html style="light"%}
