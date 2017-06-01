@@ -190,11 +190,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.47641634"
-     inkscape:cx="-457.8233"
-     inkscape:cy="839.8542"
+     inkscape:zoom="1.3475089"
+     inkscape:cx="270.02089"
+     inkscape:cy="555.27527"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer5"
      showgrid="true"
      units="in"
      objecttolerance="10000"
@@ -2804,8 +2804,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Zones"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <g
        id="g4566">
       <rect
@@ -2878,45 +2877,52 @@
            style="font-size:25px;line-height:1">Shop</tspan></text>
     </g>
     <g
-       id="g4567">
+       id="g14418"
+       transform="translate(12.755924,63.779526)">
       <rect
-         y="307.55905"
-         x="440.07874"
-         height="31.889765"
+         y="243.77953"
+         x="395.43307"
+         height="38.267723"
          width="114.80315"
          id="rect6038"
-         style="opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:1.09544528;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <text
          id="text6040-9"
-         y="335.22327"
-         x="460.63669"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2e019b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         y="258.92062"
+         x="453.21039"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#2e019b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan6044-0"
-           y="335.22327"
-           x="460.63669"
+           y="258.92062"
+           x="453.21039"
            sodipodi:role="line"
-           style="font-size:15.071105px;line-height:1">Laser Cutter</tspan></text>
+           style="font-size:15.071105px;line-height:1;text-align:center;text-anchor:middle">Rapid</tspan><tspan
+           id="tspan14412"
+           y="273.99173"
+           x="453.21039"
+           sodipodi:role="line"
+           style="font-size:15.071105px;line-height:1;text-align:center;text-anchor:middle">Prototyping</tspan></text>
     </g>
     <g
-       id="g4557">
+       id="g14407"
+       transform="matrix(1.2276626,0,0,1,-91.276521,0)">
       <rect
-         y="346.51273"
+         y="454.25195"
          x="400.92886"
-         height="267.87402"
+         height="160.13478"
          width="31.889765"
          id="rect6034"
-         style="opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:0.77317452;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <text
          transform="rotate(90)"
          id="text6040-4"
-         y="-408.21439"
-         x="394.99008"
+         y="-408.9101"
+         x="468.04153"
          style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2e019b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan6044-08"
-           y="-408.21439"
-           x="394.99008"
+           y="-408.9101"
+           x="468.04153"
            sodipodi:role="line"
            style="font-size:25px;line-height:1">Electronics</tspan></text>
     </g>
@@ -2943,28 +2949,6 @@
            style="font-size:25px;line-height:1">Dirty Studio Space</tspan></text>
     </g>
     <g
-       id="g4578">
-      <rect
-         y="327.37888"
-         x="681.55884"
-         height="140.31496"
-         width="31.889765"
-         id="rect6036"
-         style="opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         transform="rotate(90)"
-         id="text6040-0"
-         y="-692.82159"
-         x="347.0719"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2e019b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           id="tspan6044-38"
-           y="-692.82159"
-           x="347.0719"
-           sodipodi:role="line"
-           style="font-size:19.30823708px;line-height:1">3d Printing</tspan></text>
-    </g>
-    <g
        id="g4547">
       <rect
          y="314.62292"
@@ -2987,38 +2971,36 @@
            style="font-size:25px;line-height:1">Flexible Work Space</tspan></text>
     </g>
     <g
-       id="g4562">
+       id="g14426">
       <rect
-         y="346.51273"
-         x="439.19659"
-         height="267.87402"
-         width="141.19711"
+         y="447.87402"
+         x="446.4567"
+         height="197.71651"
+         width="133.93701"
          id="rect6034-7"
-         style="display:inline;opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:1.14116347;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:0.95486379;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <text
-         transform="rotate(90)"
+         transform="matrix(0,1.0157779,-0.98446717,0,0,0)"
          id="text6040-4-8"
-         y="-472.12119"
-         x="391.1257"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e019b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         y="-477.45151"
+         x="445.88431"
+         style="font-style:normal;font-weight:normal;font-size:11.56258106px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#2e019b;fill-opacity:1;stroke:none;stroke-width:0.96354842px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan6044-08-5"
-           y="-472.12119"
-           x="391.1257"
+           y="-477.45151"
+           x="445.88431"
            sodipodi:role="line"
-           style="font-size:25px;line-height:1">Class / General</tspan></text>
+           style="font-size:24.08871078px;line-height:1;stroke-width:0.96354842px">Class / General</tspan></text>
     </g>
     <g
-       id="g4616">
+       id="g14465">
       <g
          id="g4613">
-        <rect
-           style="display:inline;opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:0.96144164;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+        <path
            id="rect6034-7-3"
-           width="95.669289"
-           height="280.62991"
-           x="586.77167"
-           y="333.07086" />
+           transform="scale(0.9375)"
+           d="M 625.89062 355.27539 L 625.89062 375.68555 L 476.2207 375.68555 L 476.2207 470.92969 L 625.89062 470.92969 L 625.89062 654.61328 L 727.9375 654.61328 L 727.9375 355.27539 L 625.89062 355.27539 z "
+           style="display:inline;opacity:1;fill:#c9c6ef;fill-opacity:0.134375;stroke:#0001e1;stroke-width:1.02553773;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       </g>
       <text
          id="text6040-51"
@@ -3085,5 +3067,9 @@
          y="694.01294"
          id="tspan6044-0-7-7"
          style="font-size:15.071105px;line-height:1">Loading Dock</tspan></text>
+    <g
+       transform="matrix(2.0666668,0,0,0.31818177,-766.20483,246.22764)"
+       style="display:inline"
+       id="g4613-5" />
   </g>
 </svg>

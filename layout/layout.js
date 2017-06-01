@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					zoneName = zoneName + " " + this.textContent;
 				});
 				var a = dZones.append("li").append("a");
-				a.text(zoneName);
+				a.text(zoneName.replace(/\s+/g,' '));
 				a.on("click", function(d){
 				  dSvg.transition()
 				      .duration(750)
