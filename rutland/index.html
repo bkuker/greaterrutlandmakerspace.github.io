@@ -3,23 +3,39 @@ layout: default
 ---
 <script>
 var p = function() {
-    var scrollLocation = $(document).scrollTop() - 30;   
-    var vanishingPoint = scrollLocation + window.innerHeight / 2;
-    $("div.parallax").css('-webkit-perspective-origin', ' 50% ' + vanishingPoint + 'px');
+    var scrollLocation = $(document).scrollTop()
+    var height = $("div.parallax").innerHeight();
+    var vanishingPoint= 50 + (scrollLocation / height) * 100;
+    console.log(scrollLocation, height, vanishingPoint);
+    $("div.parallax").css('-webkit-perspective-origin', ' 50% ' + vanishingPoint + '%');
 };
 $(window).scroll(p)
 $(p);
 </script>
 <style>
+header {
+	background-image: none;
+}
+
 header, header > div.container {
 	padding-top: 0;
 	padding-bottom: 0;
 }
+
+header > div.container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 div.parallax {
 	-webkit-perspective: 100px;
 	perspective: 100px;
-	height: 760px;
 	width: 100%;
+}
+
+div.parallax > img {
+	width: 100%;
+	margin: 0;
 }
 
 div.parallax > div {
@@ -29,7 +45,7 @@ div.parallax > div {
 	margin-left: -50%;
 	bottom: 0;
 	width: 100%;
-	height: 760px;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -41,9 +57,10 @@ div.parallax > div {
 	left: 0;
 }
 
-.parallax__layer img {
+.parallax__layer > img {
 	display: block;
 	position: absolute;
+	width: 100%;
 	bottom: 0;
 	margin: 0;
 }
@@ -92,40 +109,53 @@ div.parallax > div {
 	-webkit-transform: translateZ(0px) scale(1);
 	transform: translateZ(0px) scale(1);
 }
+
+.parallax div.logo {
+	height: 100%;
+	padding-top: 10%
+}
+.parallax img.logo {
+	height: 40%;
+}
+div.logo span.name {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
+}
 </style>
 
 <header>
-	<div class="container dark">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="parallax">
-					<div>
-						<div class="parallax__layer parallax__layer__0">
-							<img src="0.png" />
-						</div>
-						<div class="parallax__layer parallax__layer__1">
-							<img src="1.png" />
-						</div>
-						<div class="parallax__layer parallax__layer__2">
-							<img src="2.png" />
-						</div>
-						<div class="parallax__layer parallax__layer__3">
-							<img src="3.png" />
-						</div>
-						<div class="parallax__layer parallax__layer__4">
-							<img src="4.png" />
-						</div>
-						<div class="parallax__layer parallax__layer__5">
-							<img src="5.png" />
-						</div>
-						<div class="parallax__layer parallax__layer__6">
-							<img src="6.png" />
+		<div class="parallax">
+			<img src="sky.png" />
+			<div>
+				<div class="parallax__layer parallax__layer__0">
+					<img src="0.png" />
+				</div>
+				<div class="parallax__layer parallax__layer__1">
+					<img src="1.png" />
+				</div>
+				<div class="parallax__layer parallax__layer__2">
+					<img src="2.png" />
+				</div>
+				<div class="parallax__layer parallax__layer__3">
+					<img src="3.png" />
+				</div>
+				<div class="parallax__layer parallax__layer__4">
+					<img src="4.png" />
+				</div>
+				<div class="parallax__layer parallax__layer__5">
+					<img src="5.png" />
+				</div>
+				<div class="parallax__layer parallax__layer__6">
+					<img src="6.png" />
+					<div class="logo col-lg-12">
+						<img class="logo" src="../img/logo-vt-hi-256.png" alt="">
+						<div class="intro-text">
+							<span class="name">Greater Rutland Makerspace</span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </header>
 
 {% include join.html style="light"%}
