@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+html, body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	color: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.scene {
+	height: 150vh;
+	padding: 5vh 10vw;
+}
+
+.parallax {
+	background-size: cover;
+	box-sizing: border-box;
+	width: 100%;
+	height: 130vh;
+	/* Since the parallax elements still consume space, we set the margin to undo
+     the height of this parallax element making it essentially consume 0 space.
+  */
+	margin-bottom: -130vh;
+}
+
+.header {
+	height: 70vh;
+}
+
+.parallax.header {
+	margin-bottom: -70vh;
+}
+
+p {
+	color: white;
+	margin: 1em 0;
+	z-index: 1;
+	position: relative;
+}
+
+.viewport {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+}
+
+.solid {
+	z-index: 1;
+	position: relative;
+	height: 70vh;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	background: black;
+}
+</style>
+<script src="parallax.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		initializeParallax(document.querySelector('.viewport'));
+	});
+</script>
+</head>
+<body>
+	<div class="viewport">
+		<div>
+			<!-- Specifying a parallax rate of 0.3 will slide the image at that proportion of the scroll speed. -->
+			<div class="parallax header" style="background-image: url('/img/backgrounds/help.jpg');" parallax="0.3"></div>
+			<div class="scene header">
+				<h1>This is the header</h1>
+			</div>
+			<div class="scene solid star">
+				<h1>This is some text</h1>
+				<p>Lorem ipsum dolor sit amet, et natum mucius quo, nam zril offendit ei. Cu mea amet paulo consequat. Eam
+					nonumy integre malorum ei. Fabulas feugait detracto cu usu. Ad brute moderatius sit, ne mel ullum saperet.</p>
+				<p>Inermis petentium cotidieque sed cu. No duo alienum salutandi. Exerci evertitur vix ea, mei audire
+					conclusionemque an. His nisl graece euismod ad.</p>
+
+				<p>Lorem ipsum dolor sit amet, et natum mucius quo, nam zril offendit ei. Cu mea amet paulo consequat. Eam
+					nonumy integre malorum ei. Fabulas feugait detracto cu usu. Ad brute moderatius sit, ne mel ullum saperet.</p>
+				<p>Inermis petentium cotidieque sed cu. No duo alienum salutandi. Exerci evertitur vix ea, mei audire
+					conclusionemque an. His nisl graece euismod ad.</p>
+				<p>Lorem ipsum dolor sit amet, et natum mucius quo, nam zril offendit ei. Cu mea amet paulo consequat. Eam
+					nonumy integre malorum ei. Fabulas feugait detracto cu usu. Ad brute moderatius sit, ne mel ullum saperet.</p>
+				<p>Inermis petentium cotidieque sed cu. No duo alienum salutandi. Exerci evertitur vix ea, mei audire
+					conclusionemque an. His nisl graece euismod ad.</p>
+			</div>
+			<!-- When a rate isn't specified, it will be calculated such that the image always fills the space between the
+           element before it and the next element with the "parallax-cover" attribute. -->
+			<div class="parallax" style="background-image: url('/img/backgrounds/mountain.jpg');" parallax></div>
+			<div class="scene">
+				<p>Lorem ipsum dolor sit amet, et natum mucius quo, nam zril offendit ei. Cu mea amet paulo consequat. Eam
+					nonumy integre malorum ei. Fabulas feugait detracto cu usu. Ad brute moderatius sit, ne mel ullum saperet.</p>
+				<p>Inermis petentium cotidieque sed cu. No duo alienum salutandi. Exerci evertitur vix ea, mei audire
+					conclusionemque an. His nisl graece euismod ad.</p>
+			</div>
+			<div class="scene solid" parallax-cover>
+				<p>Lorem ipsum dolor sit amet, et natum mucius quo, nam zril offendit ei. Cu mea amet paulo consequat. Eam
+					nonumy integre malorum ei. Fabulas feugait detracto cu usu. Ad brute moderatius sit, ne mel ullum saperet.</p>
+				<p>Inermis petentium cotidieque sed cu. No duo alienum salutandi. Exerci evertitur vix ea, mei audire
+					conclusionemque an. His nisl graece euismod ad.</p>
+			</div>
+			<!-- When a rate isn't specified and there is no subsequent element with the "parallax-cover" attribute the rate
+           will be calculated such that the image slides until the end of the scrollable content. -->
+			<div class="parallax" style="background-image: url('/img/backgrounds/rutland.jpg');" parallax></div>
+			<div class="scene">
+				<p>Lorem ipsum dolor sit amet, et natum mucius quo, nam zril offendit ei. Cu mea amet paulo consequat. Eam
+					nonumy integre malorum ei. Fabulas feugait detracto cu usu. Ad brute moderatius sit, ne mel ullum saperet.</p>
+				<p>Inermis petentium cotidieque sed cu. No duo alienum salutandi. Exerci evertitur vix ea, mei audire
+					conclusionemque an. His nisl graece euismod ad.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
