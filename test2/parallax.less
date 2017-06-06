@@ -1,8 +1,11 @@
 /* Parallax base styles
   --------------------------------------------- */
 .parallax {
-	height: 500px; /* fallback for older browsers */
-	height: 100vh;
+	position: absolute;
+	top: 51px;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-perspective: 100px;
@@ -33,8 +36,8 @@
 
 .generate-parallax__layer--b(@n){
 	.parallax__layer--b@{n} {
-		-webkit-transform: translateZ(-@n * 50px) scale(1+@n * .5);
-		transform: translateZ(-@n * 50px) scale(1+@n * .5);
+		-webkit-transform: translateZ(-@n * 50px) scale(1+@n * .55);
+		transform: translateZ(-@n * 50px) scale(1+@n * .55);
 	}
 }
 

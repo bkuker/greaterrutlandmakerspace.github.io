@@ -1,172 +1,120 @@
 ---
+layout: base
+less: index.less
 ---
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>A grouped pure CSS parallax demo by Keith Clark</title>
-
-<!-- Latest compiled and minified Bootstrap CSS & Javascript -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!--  Custom Fonts -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-	integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-<!--  CSS & LESS files -->
-<link href="index.less" rel="stylesheet/less" type="text.css">
-
-<!--  LESS clientside processor -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
-
-
-<style>
-html {
-	box-sizing: border-box;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
-body, html {
-	overflow: hidden;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-/* centre the content in the parallax layers */
-.title {
-	text-align: center;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-
-/* style the groups
-  --------------------------------------------- */
-
-
-#rutland div.logo {
-	height: 100%;
-	padding-top: 10%;
-	text-align: center;
-}
-
-#rutland div.logo img {
-	height: 40%;
-}
-
-#rutland div.logo span.name {
-	display: block;
-	text-transform: uppercase;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 700;
-	font-size: 4.75em;
-	color: white; -webkit-text-stroke-width : 1px;
-	-webkit-text-stroke-color: #2c3e50;
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: #000000;
-	-webkit-text-stroke-width: 1px;
-}
-</style>
-</head>
-
-<body>
-
-	<div class="debug" style="display: none">
-		<label><input type="checkbox"> Debug</label>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header page-scroll">
+			<a class="hidden-sm navbar-brand" href="/#page-top">The MINT - Rutland's Makerspace</a> <a
+				class="hidden-xs hidden-md hidden-lg navbar-brand" href="/#page-top" title="Greater Rutland Makerspace">The MINT</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden"><a href="#page-top"></a></li>
+				<li class="page-scroll"><a href="#calendar">Calendar</a></li>
+				<li class="page-scroll"><a href="#about">About</a></li>
+				<li class="page-scroll"><a href="#join">Join</a></li>
+				<li class="page-scroll"><a href="#people">People</a></li>
+				<li class="page-scroll"><a href="#support">Support</a></li>
+			</ul>
+		</div>
 	</div>
+</nav>
+
+<div class="debug" style="display: none">
+	<label><input type="checkbox"> Debug</label>
+</div>
 
 
-	<div class="parallax">
+<div class="parallax">
 
 
-		<div id="rutland" class="parallax__group">
-			<div class="parallax__layer parallax__layer--b7"></div>
-			<div class="parallax__layer parallax__layer--b6"></div>
-			<div class="parallax__layer parallax__layer--b5"></div>
-			<div class="parallax__layer parallax__layer--b4"></div>
-			<div class="parallax__layer parallax__layer--b3"></div>
-			<div class="parallax__layer parallax__layer--b2"></div>
-			<div class="parallax__layer parallax__layer--b1"></div>
-			<div class="parallax__layer parallax__layer--base">
-				<div class="logo col-lg-12">
-					<img src="../img/logo-vt-hi-256.png" alt="">
-					<div class="name">
-						<span class="name">Greater Rutland Makerspace</span>
-					</div>
+	<div id="rutland" class="parallax__group">
+		<div class="parallax__layer parallax__layer--b7"></div>
+		<div class="parallax__layer parallax__layer--b6"></div>
+		<div class="parallax__layer parallax__layer--b5"></div>
+		<div class="parallax__layer parallax__layer--b4"></div>
+		<div class="parallax__layer parallax__layer--b3"></div>
+		<div class="parallax__layer parallax__layer--b2"></div>
+		<div class="parallax__layer parallax__layer--b1"></div>
+		<div class="parallax__layer parallax__layer--base">
+			<div class="logo col-lg-12">
+				<img src="logo.png" alt="">
+				<div class="name">
+					<span class="name">Rutland's Makerspace</span>
 				</div>
 			</div>
 		</div>
-
-		<div class="content">{% include calendar.html style="light"%}</div>
-
-
-		<div class="parallax__group parallax__divider_image">
-			<div class="parallax__layer parallax__layer--base">
-				<div class="caption">This is a caption for this background image.</div>
-			</div>
-			<div class="parallax__layer parallax__layer--b1" style="background-image: url('bg/bg - 1.jpg');"></div>
-		</div>
-
-		<div class="content">{% include about.html style="light"%}</div>
-
-
-
-		<div class="parallax__group parallax__divider_image">
-			<div class="parallax__layer parallax__layer--base">
-				<div class="caption">This is a caption for this background image.</div>
-			</div>
-			<div class="parallax__layer parallax__layer--b1" style="background-image: url('bg/bg - 2.jpg');"></div>
-		</div>
-
-		<div class="content">{% include join.html style="light"%}</div>
-
-
-
-		<div class="parallax__group parallax__divider_image">
-			<div class="parallax__layer parallax__layer--base">
-				<div class="caption">This is a caption for this background image.</div>
-			</div>
-			<div class="parallax__layer parallax__layer--b1" style="background-image: url('bg/bg - 3.jpg');"></div>
-		</div>
-
-
-		<div class="content">{% include people.html style="light"%}</div>
-
-
-
-		<div class="parallax__group parallax__divider_image">
-			<div class="parallax__layer parallax__layer--base">
-				<div class="caption">This is a caption for this background image.</div>
-			</div>
-			<
-			<div class="parallax__layer parallax__layer--b1" style="background-image: url('bg/bg - 4.jpg');"></div>
-		</div>
-
-		<div class="content">{% include support.html style="light"%}</div>
-
 	</div>
 
-	<script>
-		var debugInput = document.querySelector("input");
-		function updateDebugState() {
-			document.body.classList.toggle('debug-on', debugInput.checked);
-		}
-		debugInput.addEventListener("click", updateDebugState);
-		updateDebugState();
-	</script>
+	<div class="content">{% include calendar.html style="light"%}</div>
 
 
-</body>
-</html>
+	<div class="parallax__group parallax__divider_image">
+		<div class="parallax__layer parallax__layer--base">
+			<div class="caption">This is a caption for this background image.</div>
+		</div>
+		<div class="parallax__layer parallax__layer--b1" style="background-image: url('bg/bg - 1.jpg');"></div>
+	</div>
+
+	<div class="content">{% include about.html style="light"%}</div>
+
+
+
+	<div class="parallax__group parallax__divider_image">
+		<div class="parallax__layer parallax__layer--base">
+			<div class="caption">This is a caption for this background image.</div>
+		</div>
+		<div class="parallax__layer parallax__layer--b1" style="background-image: url('bg/bg - 2.jpg');"></div>
+	</div>
+
+	<div class="content">{% include join.html style="light"%}</div>
+
+
+
+	<div class="parallax__group parallax__divider_image">
+		<div class="parallax__layer parallax__layer--base">
+			<div class="caption">This is a caption for this background image.</div>
+		</div>
+		<div class="parallax__layer parallax__layer--b1" style="background-image: url('bg/bg - 3.jpg');"></div>
+	</div>
+
+
+	<div class="content">{% include people.html style="light"%}</div>
+
+
+
+	<div class="parallax__group parallax__divider_image">
+		<div class="parallax__layer parallax__layer--base">
+			<div class="caption">This is a caption for this background image.</div>
+		</div>
+		<
+		<div class="parallax__layer parallax__layer--b1" style="background-image: url('bg/bg - 4.jpg');"></div>
+	</div>
+
+	<div class="content">
+		{% include support.html style="light"%}
+		
+		<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3 col-sm-4 copy">&copy; Rutland Makers 2017</div>
+				<div class="col-xs-9 col-sm-8">{% include social.html %}</div>
+
+			</div>
+		</div>
+		</footer>
+	</div>
+	
+	
+
+</div>
+
+<script>
+	var debugInput = document.querySelector("input");
+	function updateDebugState() {
+		document.body.classList.toggle('debug-on', debugInput.checked);
+	}
+	debugInput.addEventListener("click", updateDebugState);
+	updateDebugState();
+</script>
