@@ -1,0 +1,110 @@
+@import "colors";
+@import "/css/social";
+@import "/css/cogs";
+@import "../people/people";
+@import "/css/nav";
+
+@import "text";
+@import "parallax";
+@import "debug.css";
+@import "../rutland/rutland.css";
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body, html {
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#rutland div.logo {
+	height: 100%;
+	padding-top: 10%;
+	text-align: center;
+}
+
+#rutland div.logo img {
+	height: 40%;
+}
+
+#rutland div.logo div.name {
+	position: relative;
+
+}
+
+#rutland div.logo div.name span {
+	letter-spacing: 2px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	text-transform: uppercase;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 4.75em;
+	color: #f3d456;
+}
+
+#rutland div.logo div.name span.name_shadow {
+	color: #000000;
+	-webkit-text-stroke-width: 7px;
+	-webkit-text-stroke-color: #000000;
+}
+
+.support {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+footer {
+	background-color: #364c63;
+	padding: 0;
+	color: white;
+	height: 200px;
+	overflow: hidden;
+	border-top: 1px solid #2c3e50;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 80px;
+}
+
+footer ul.social {
+	width: auto;
+	margin: 0;
+}
+
+footer .social li {
+	display: inline-block;
+}
+
+footer .social a {
+	font-size: 14px;
+	color: #fff ! important;
+	font-weight: normal;
+}
+
+@media ( max-width : 1199px) {
+	footer .social a span {
+		display: none;
+	}
+	footer .social li {
+		float: right;
+	}
+}
+
+footer .copy {
+	padding-top: 15px;
+}

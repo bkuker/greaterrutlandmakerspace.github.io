@@ -1,56 +1,120 @@
 ---
-layout: default
+layout: base
+less: index/css/index.less
 ---
-<header>
-	<div class="container dark">
-		<div class="row">
-			<div class="col-lg-12">
-				<img class="logo" src="img/logo-vt-hi-256.png" alt="">
-				<div class="intro-text">
-					<span class="name">Greater Rutland Makerspace</span>
-					<hr class="cog">
-					{% include social.html %}
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header page-scroll">
+			<a class="hidden-sm navbar-brand" href="/#page-top">The MINT - Rutland's Makerspace</a> <a
+				class="hidden-xs hidden-md hidden-lg navbar-brand" href="/#page-top" title="Greater Rutland Makerspace">The MINT</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden"><a href="#page-top"></a></li>
+				<li class="page-scroll"><a href="#calendar">Calendar</a></li>
+				<li class="page-scroll"><a href="#about">About</a></li>
+				<li class="page-scroll"><a href="#join">Join</a></li>
+				<li class="page-scroll"><a href="#people">People</a></li>
+				<li class="page-scroll"><a href="#support">Support</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="debug" style="display: none">
+	<label><input type="checkbox"> Debug</label>
+</div>
+
+
+<div class="parallax">
+
+
+	<div id="rutland" class="parallax__group">
+		<div class="parallax__layer parallax__layer--b7"></div>
+		<div class="parallax__layer parallax__layer--b6"></div>
+		<div class="parallax__layer parallax__layer--b5"></div>
+		<div class="parallax__layer parallax__layer--b4"></div>
+		<div class="parallax__layer parallax__layer--b3"></div>
+		<div class="parallax__layer parallax__layer--b2"></div>
+		<div class="parallax__layer parallax__layer--b1"></div>
+		<div class="parallax__layer parallax__layer--base">
+			<div class="logo col-lg-12">
+				<img src="index/logo.png" alt="">
+				<div class="name">
+					<span class="name_shadow">Rutland's<br>Makerspace</span>
+					<span class="name">Rutland's<br>Makerspace</span>
 				</div>
 			</div>
 		</div>
 	</div>
-</header>
+
+	<div class="content">{% include_relative index/about/about.html style="light"%}</div>
+
+	<div class="parallax__group parallax__divider_image">
+		<div class="parallax__layer parallax__layer--base">
+			<div class="caption">The MINT Metal Shop.</div>
+		</div>
+		<div class="parallax__layer parallax__layer--b1" style="background-image: url('index/bg/metalshop.jpg');"></div>
+	</div>
+
+	
+	<div class="content">{% include_relative index/space/space.html style="light"%}</div>
 
 
-{% include calendar.html style="light"%}
+	<div class="parallax__group parallax__divider_image">
+		<div class="parallax__layer parallax__layer--base">
+			<div class="caption">The MINT Wood Shop and CNC Router.</div>
+		</div>
+		<div class="parallax__layer parallax__layer--b1" style="background-image: url('index/bg/woodshop.jpg');"></div>
+	</div>
 
-{% if false %}
-<section id="events" class="light">
-	{% for post in site.posts reversed%}
-		{% if post.past %}
-			<!-- Skipping past event {{post.title}} -->
-		{% else %}
-			<div class="post container">
-				<div class="row" style='margin-bottom: 40px'>
-					<div class="col-lg-11 col-lg-offset-1">
-						<a href="{{post.url}}">
-						<h1><!-- Whitespace added for readability -->
-							{% assign d = post.date | date: "%-d"  %}
-							{{ post.date | date: "%B" }} 
-							{% case d %}
-							  {% when '1' or '21' or '31' %}{{ d }}st
-							  {% when '2' or '22' %}{{ d }}nd
-							  {% when '3' or '23' %}{{ d }}rd
-							  {% else %}{{ d }}th
-							  {% endcase %}:
-						</h1>
-						<h2>{{post.title}}</h2>
-						</a>
-					</div>
-				</div>
-				{{post.content}}
+	<div class="content">{% include_relative index/join.html style="light"%}</div>
+
+
+
+	<div class="parallax__group parallax__divider_image">
+		<div class="parallax__layer parallax__layer--base">
+			<div class="caption">MINT Members Building Flight Computers for Paragliding.</div>
+		</div>
+		<div class="parallax__layer parallax__layer--b1" style="background-image: url('index/bg/para.jpg');"></div>
+	</div>
+
+
+	<div class="content">{% include_relative index/people/people.html style="light"%}</div>
+
+
+
+	<div class="parallax__group parallax__divider_image">
+		<div class="parallax__layer parallax__layer--base">
+			<div class="caption">The MINT's Prusa i3 Mk2 3D Printer.</div>
+		</div>
+		<
+		<div class="parallax__layer parallax__layer--b1" style="background-image: url('index/bg/printer.jpg');"></div>
+	</div>
+
+	<div class="content">
+		{% include_relative index/support.html style="light"%}
+		
+		<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3 col-sm-4 copy">&copy; Rutland Makers 2017</div>
+				<div class="col-xs-9 col-sm-8">{% include social.html %}</div>
+
 			</div>
-		{% endif %}
-	{% endfor %}
-</section>
-{% endif %}
+		</div>
+		</footer>
+	</div>
+	
+	
 
-{% include about.html style="dark"%}
-{% include join.html style="light"%}
-{% include people.html style="dark"%}
-{% include support.html style="light"%}
+</div>
+
+<script>
+	var debugInput = document.querySelector("input");
+	function updateDebugState() {
+		document.body.classList.toggle('debug-on', debugInput.checked);
+	}
+	debugInput.addEventListener("click", updateDebugState);
+	updateDebugState();
+</script>

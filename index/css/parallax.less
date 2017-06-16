@@ -1,0 +1,89 @@
+/* Parallax base styles
+  --------------------------------------------- */
+.parallax {
+	position: absolute;
+	top: 51px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 100px;
+	perspective: 100px;
+}
+
+.parallax__group {
+	position: relative;
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.parallax__layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.parallax__layer--base {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	z-index: 4;
+}
+
+.generate-parallax__layer--b(@n){
+	.parallax__layer--b@{n} {
+		-webkit-transform: translateZ(-@n * 50px) scale(1+@n * .55);
+		transform: translateZ(-@n * 50px) scale(1+@n * .55);
+	}
+}
+
+.generate-parallax__layer--b(1);
+.generate-parallax__layer--b(2);
+.generate-parallax__layer--b(3);
+.generate-parallax__layer--b(4);
+.generate-parallax__layer--b(5);
+.generate-parallax__layer--b(6);
+.generate-parallax__layer--b(7);
+
+
+.parallax__layer--f1 {
+	-webkit-transform: translateZ(10px) scale(.9);
+	transform: translateZ(10px) scale(.9);
+	z-index: 1;
+}
+
+.parallax>div.content {
+	min-height: 100vh;
+	position: relative;
+	z-index: 500;
+	background: white;
+	position: relative;
+	padding-top: 50px;
+		padding-bottom: 50px;
+}
+
+.parallax__divider_image {
+	z-index: 3;
+	height: 50vh;
+}
+
+
+.parallax__divider_image .parallax__layer--b1 {
+	background-size: cover;
+	background-position: center center;
+	top: -25%;
+	bottom: -25%;
+}
+
+.parallax__divider_image div.caption {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0 0 2px #000;
+}
