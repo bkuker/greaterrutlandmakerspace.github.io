@@ -6,25 +6,20 @@ less: index/css/index.less
 	<div class="container">
 		<div class="navbar-header page-scroll">
 			<a class="hidden-sm navbar-brand" href="/#page-top">The MINT - Rutland's Makerspace</a> <a
-				class="hidden-xs hidden-md hidden-lg navbar-brand" href="/#page-top" title="Greater Rutland Makerspace">The MINT</a>
+				class="hidden-xs hidden-md hidden-lg navbar-brand" href="/#page-top" title="The MINT - Rutland's Makerspace">The MINT</a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="hidden"><a href="#page-top"></a></li>
-				<li class="page-scroll"><a href="#calendar">Calendar</a></li>
+				<li class="page-scroll"><a href="/calendar">Calendar</a></li>
 				<li class="page-scroll"><a href="#about">About</a></li>
-				<li class="page-scroll"><a href="#join">Join</a></li>
+				<li class="page-scroll"><a href="/membership">Join</a></li>
 				<li class="page-scroll"><a href="#people">People</a></li>
 				<li class="page-scroll"><a href="#support">Support</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
-
-<div class="debug" style="display: none">
-	<label><input type="checkbox"> Debug</label>
-</div>
-
 
 <div class="parallax">
 
@@ -52,6 +47,7 @@ less: index/css/index.less
 
 	<div class="parallax__group parallax__divider_image">
 		<div class="parallax__layer parallax__layer--base">
+			<div class="inspiration">Expertise and innovation under one roof.</div>
 			<div class="caption">The MINT Metal Shop.</div>
 		</div>
 		<div class="parallax__layer parallax__layer--b1" style="background-image: url('index/bg/metalshop.jpg');"></div>
@@ -63,6 +59,7 @@ less: index/css/index.less
 
 	<div class="parallax__group parallax__divider_image">
 		<div class="parallax__layer parallax__layer--base">
+			<div class="inspiration">Creativity and economic development are two sides of the same coin.</div>
 			<div class="caption">The MINT Wood Shop and CNC Router.</div>
 		</div>
 		<div class="parallax__layer parallax__layer--b1" style="background-image: url('index/bg/woodshop.jpg');"></div>
@@ -74,6 +71,7 @@ less: index/css/index.less
 
 	<div class="parallax__group parallax__divider_image">
 		<div class="parallax__layer parallax__layer--base">
+			<div class="inspiration">Where inspiration strikes.</div>
 			<div class="caption">MINT Members Building Flight Computers for Paragliding.</div>
 		</div>
 		<div class="parallax__layer parallax__layer--b1" style="background-image: url('index/bg/para.jpg');"></div>
@@ -86,6 +84,7 @@ less: index/css/index.less
 
 	<div class="parallax__group parallax__divider_image">
 		<div class="parallax__layer parallax__layer--base">
+			<div class="inspiration">Inspirational Quote</div>
 			<div class="caption">The MINT's Prusa i3 Mk2 3D Printer.</div>
 		</div>
 		<
@@ -93,7 +92,7 @@ less: index/css/index.less
 	</div>
 
 	<div class="content">
-		{% include_relative index/support.html style="light"%}
+		{% include_relative index/support/support.html style="light"%}
 		
 		<footer>
 		<div class="container">
