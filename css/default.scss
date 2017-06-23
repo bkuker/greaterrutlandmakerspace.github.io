@@ -1,10 +1,8 @@
-@header-bg-color: #007a33;
-@header-text-color: #fff;
+---
 
-@dark-bg-color: #71ACBD;
-@dark-text-color: #fff;
-@light-bg-color: #fff;
-@light-text-color: #2c3e50;
+---
+
+@import "colors";
 
 #wrap {
 	padding-top: 51px;
@@ -35,21 +33,21 @@ h1 , h2 , h3 , h4 , h5 , h6 {
 }
 
 .dark {
-	background: @dark-bg-color;
-	color: @dark-text-color;
+	background: $dark-bg-color;
+	color: $dark-text-color;
 }
 
 .dark a h1, .dark a h2 {
-	color: @dark-text-color;
+	color: $dark-text-color;
 }
 
 .light {
-	background: @light-bg-color;
-	color: @light-text-color;
+	background: $light-bg-color;
+	color: $light-text-color;
 }
 
 .light a h1, .light a h2 {
-	color: @light-text-color;
+	color: $light-text-color;
 }
 
 .centered.img-responsive {
@@ -72,7 +70,6 @@ div.post {
 }
 
 @import "nav";
-@import "header";
 @import "social";
 @import "cogs";
 @import "footer.css";

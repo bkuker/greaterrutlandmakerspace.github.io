@@ -1,13 +1,16 @@
-@import "/css/colors";
-@import "/css/social";
-@import "/css/cogs";
+---
 
-@import "/css/nav";
+---
+@import "colors";
+@import "social";
+@import "cogs";
+
+@import "nav";
 
 @import "text";
-@import "parallax";
+@import "parallax.css";
 @import "../rutland/rutland.css";
-@import "../people/people";
+@import "../people/people.css";
 
 html {
 	box-sizing: border-box;

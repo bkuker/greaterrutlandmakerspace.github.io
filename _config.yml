@@ -5,7 +5,12 @@ future: true
 
 # build settings
 port: 4000
+host: 0.0.0.0
 
 collections:
   wishlist:
     output: false
+    
+sass:
+  sass_dir: _sass
+#  style: compressed

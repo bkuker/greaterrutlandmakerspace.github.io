@@ -1,12 +1,14 @@
+@import "colors";
+
 #mainNav {
 	text-transform: uppercase;
 	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
-	background-color: @header-bg-color;
+	background-color: $header-bg-color;
 }
 
 #mainNav a {
-	color: @header-text-color;
+	color: $header-text-color;
 }
 
 @media ( min-width : 450px) {

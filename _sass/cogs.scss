@@ -1,3 +1,5 @@
+@import "colors";
+
 hr.cog {
 	border: none;
 	margin: 25px auto 30px;
@@ -26,9 +28,9 @@ hr.cog:after {
 }
 
 .dark hr.cog:after {
-	color: @dark-text-color;
+	color: $dark-text-color;
 }
 
 .light hr.cog:after {
-	background-color: @light-bg-color;
+	background-color: $light-bg-color;
 }

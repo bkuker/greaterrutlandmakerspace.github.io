@@ -1,3 +1,5 @@
+@import "colors";
+
 ul.social {
 	margin-top: 50px;
 	width: 350px;
@@ -18,10 +20,10 @@ ul.social {
 
 .social a {
 	font-size: 18px;
-	color: @dark-text-color ! important;
+	color: $dark-text-color ! important;
 	font-weight: bold;
 }
 
 .light .social a {
-	color: @light-text-color ! important;
+	color: $light-text-color ! important;
 }
